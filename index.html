@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- Hey quit creeping around! 🫣 -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Rischio</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.ico">
+    <!-- CSS for bottom-right image -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            overflow: hidden;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        #bottom-right-image {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            width: 100px;
+            height: auto;
+            z-index: 1000;
+        }
+    </style>
+</head>
+
+<body>
+    <img id="bottom-right-image" src="img/cat.png" alt="cat">
+</body>
+
+</html>

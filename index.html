@@ -28,11 +28,20 @@
 
         #bottom-right-image {
             position: fixed;
-            bottom: 10px;
-            right: 10px;
-            width: 100px;
+            bottom: 30px;
+            right: 30px;
+            width: 300px;
             height: auto;
             z-index: 1000;
+            transition: transform 1s ease, opacity 1s ease;
+        }
+
+        #bottom-right-image:hover {
+            content: url("img/cat_bubble.png");
+            transform: scale(1);
+            /* Enlarge the image slightly on hover */
+            opacity: 1;
+            /* Make the image slightly transparent on hover */
         }
     </style>
 </head>

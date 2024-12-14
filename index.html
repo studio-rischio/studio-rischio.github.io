@@ -6,9 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studio Rischio</title>
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="img/favicon.ico">
-    <!-- CSS for bottom-right image -->
     <style>
         body {
             margin: 0;
@@ -20,35 +18,58 @@
             height: 100vh;
             background-color: #f4f4f4;
             overflow: hidden;
+            animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
         }
 
         .content {
-            text-align: center;
-        }
-
-        #bottom-right-image {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
+            position: relative;
             width: 300px;
-            height: auto;
-            z-index: 1000;
-            transition: transform 1s ease, opacity 1s ease;
+            height: 300px;
         }
 
-        #bottom-right-image:hover {
-            content: url("img/cat_bubble.png");
-            transform: scale(1);
-            /* Enlarge the image slightly on hover */
+        .content img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: opacity 0.2s ease;
+        }
+
+        #image1 {
+            z-index: 1;
             opacity: 1;
-            /* Make the image slightly transparent on hover */
+        }
+
+        #image2 {
+            z-index: 2;
+            opacity: 0;
+        }
+
+        #image2:hover {
+            opacity: 1;
         }
     </style>
 </head>
 
 <body>
     <a href="mailto:info@rischio.studio">
-        <img id="bottom-right-image" src="img/cat.png" alt="cat">
+        <div class="content">
+            <img id="image1" src="img/cat.png">
+            <img id="image2" src="img/cat_bubble.png">
+        </div>
     </a>
 </body>
 
